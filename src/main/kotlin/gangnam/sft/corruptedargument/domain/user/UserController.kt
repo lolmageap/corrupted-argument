@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RestController
 class UserController(private val userService: UserService) {
 
     @PostMapping("/")
-    fun createUser(@RequestBody signIn: SignIn) = userService.save( signIn.toUserRequest() )
+    fun createUser(@RequestBody signIn: SignIn) = userService.save(signIn.toUserRequest())
 
 }
