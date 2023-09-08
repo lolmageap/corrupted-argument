@@ -9,7 +9,7 @@ import org.springframework.security.web.SecurityFilterChain
 
 @Configuration
 @EnableWebSecurity
-class WebSecurity {
+class SecurityConfig {
 
     @Bean
     @Throws(Exception::class)
