@@ -1,0 +1,7 @@
+POST http://localhost:8080/argument/
+Content-Type: application/json
+
+{
+  "title": "제목이다~",
+  "content": "내용이다~"
+}
