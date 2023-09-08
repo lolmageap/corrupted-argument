@@ -8,6 +8,4 @@ import jakarta.persistence.Table
 @Table(name = "users")
 class User(
     var name: String,
-) : BaseEntity() {
-
-}
+) : BaseEntity()
