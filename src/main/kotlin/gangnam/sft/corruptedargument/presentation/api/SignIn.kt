@@ -1,9 +1,9 @@
 package gangnam.sft.corruptedargument.presentation.api
 
-import gangnam.sft.corruptedargument.service.UserServiceRequest
+import gangnam.sft.corruptedargument.service.UserRequest
 
 data class SignIn(val name: String) {
 
-    fun toUserRequest() = UserServiceRequest(name = this.name)
+    fun toUserRequest() = UserRequest(name = this.name)
 
 }

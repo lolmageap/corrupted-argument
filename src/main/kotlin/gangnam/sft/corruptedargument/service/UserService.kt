@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service
 @Service
 class UserService(private val userRepository: UserRepository) {
 
-    fun save(userRequest: UserServiceRequest) : UserServiceResponse =
-        userRepository.save(userRequest.toUser()).let(UserServiceResponse.Companion::toUserResponse)
+    fun save(userRequest: UserRequest) : UserResponse =
+        userRepository.save(userRequest.toUser()).let(UserResponse.Companion::toUserResponse)
 
 }

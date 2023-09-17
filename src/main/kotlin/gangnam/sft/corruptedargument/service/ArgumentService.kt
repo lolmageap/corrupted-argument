@@ -10,12 +10,12 @@ import java.lang.RuntimeException
 class ArgumentService(private val argumentRepository: ArgumentRepository) {
 
     @Transactional
-    fun saveArgument(request: ArgumentServiceRequest) {
+    fun saveArgument(request: ArgumentRequest) {
         argumentRepository.save(request.toArgument())
     }
 
-    fun findArgument(id: Long): ArgumentServiceResponse {
+    fun findArgument(id: Long): ArgumentResponse {
         val argument = argumentRepository.findById(id).orElseThrow { RuntimeException() }
-        return ArgumentServiceResponse.from(argument)
+        return ArgumentResponse.from(argument)
     }
 }
