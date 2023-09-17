@@ -1,8 +1,8 @@
-package gangnam.sft.corruptedargument.domain.argument.presentation.api
+package gangnam.sft.corruptedargument.presentation.api
 
 import gangnam.sft.corruptedargument.service.ArgumentService
-import gangnam.sft.corruptedargument.domain.argument.presentation.ArgumentRequest
-import gangnam.sft.corruptedargument.domain.argument.presentation.ArgumentResponse
+import gangnam.sft.corruptedargument.presentation.ArgumentRequest
+import gangnam.sft.corruptedargument.presentation.ArgumentResponse
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 

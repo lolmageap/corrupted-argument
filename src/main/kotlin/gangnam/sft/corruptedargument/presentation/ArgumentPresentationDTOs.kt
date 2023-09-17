@@ -1,4 +1,4 @@
-package gangnam.sft.corruptedargument.domain.argument.presentation
+package gangnam.sft.corruptedargument.presentation
 
 import gangnam.sft.corruptedargument.service.ArgumentServiceRequest
 import gangnam.sft.corruptedargument.service.ArgumentServiceResponse
