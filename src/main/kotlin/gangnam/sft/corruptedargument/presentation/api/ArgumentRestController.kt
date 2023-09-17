@@ -1,6 +1,6 @@
 package gangnam.sft.corruptedargument.domain.argument.presentation.api
 
-import gangnam.sft.corruptedargument.domain.argument.application.ArgumentService
+import gangnam.sft.corruptedargument.service.ArgumentService
 import gangnam.sft.corruptedargument.domain.argument.presentation.ArgumentRequest
 import gangnam.sft.corruptedargument.domain.argument.presentation.ArgumentResponse
 import org.springframework.http.ResponseEntity

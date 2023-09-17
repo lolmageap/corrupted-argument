@@ -1,4 +1,4 @@
-package gangnam.sft.corruptedargument.domain.argument.application
+package gangnam.sft.corruptedargument.service
 
 import gangnam.sft.corruptedargument.domain.argument.ArgumentRepository
 import org.springframework.stereotype.Service
@@ -11,7 +11,7 @@ class ArgumentService(private val argumentRepository: ArgumentRepository) {
 
     @Transactional
     fun saveArgument(request: ArgumentServiceRequest) {
-        argumentRepository.save(request.toEntity())
+        argumentRepository.save(request.toArgument())
     }
 
     fun findArgument(id: Long): ArgumentServiceResponse {
