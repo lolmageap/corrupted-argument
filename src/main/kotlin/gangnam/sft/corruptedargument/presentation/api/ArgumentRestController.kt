@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*
 @RequestMapping("/argument")
 class ArgumentRestController(private val argumentService: ArgumentService) {
 
-    @PostMapping("/")
+    @PostMapping
     fun addArticle(@RequestBody request: ArgumentRequest) {
         argumentService.saveArgument(request.toServiceRequest())
     }
