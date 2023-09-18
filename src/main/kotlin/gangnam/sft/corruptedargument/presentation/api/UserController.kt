@@ -10,6 +10,10 @@ class UserController(private val userService: UserService) {
 
     @PostMapping
     @ResponseStatus(value = HttpStatus.CREATED)
-    fun createUser(@RequestBody signIn: SignIn) = userService.save(signIn.toUserRequest())
+    fun signUp(@RequestBody signUp: SignUp) = userService.signUp(signUp.toUserRequest())
+
+    @PostMapping
+    @ResponseStatus(value = HttpStatus.CREATED)
+    fun signIn(@RequestBody signIn: SignIn) = userService.signIn(signIn)
 
 }
