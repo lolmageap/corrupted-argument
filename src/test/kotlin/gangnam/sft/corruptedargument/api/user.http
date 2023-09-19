@@ -6,8 +6,8 @@ Content-Type: application/json
   "email" : "test@naver.com",
   "password" : "Abcd1234!",
   "confirmPassword" : "Abcd1234!",
-  "name" : "asdf",
-  "birth" : "2023-09-19"
+  "name" : "김찬우",
+  "birth" : "2023-09-18"
 }
 
 ### 로그인
