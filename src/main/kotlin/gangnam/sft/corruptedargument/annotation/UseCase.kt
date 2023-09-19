@@ -7,7 +7,6 @@ import org.springframework.transaction.annotation.Transactional
 @Target(AnnotationTarget.CLASS)
 @Retention(AnnotationRetention.RUNTIME)
 @MustBeDocumented
-@Transactional(readOnly = false)
 @Component
 annotation class UseCase(
     /**
