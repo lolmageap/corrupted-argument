@@ -1,24 +1,24 @@
 package gangnam.sft.corruptedargument.presentation.api
 
+import gangnam.sft.corruptedargument.presentation.ArgumentInfo
 import gangnam.sft.corruptedargument.service.ArgumentService
-import gangnam.sft.corruptedargument.presentation.ArgumentRequest
-import gangnam.sft.corruptedargument.presentation.ArgumentResponse
+import gangnam.sft.corruptedargument.presentation.NewArgument
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/argument")
-class ArgumentRestController(private val argumentService: ArgumentService) {
+class ArgumentController(private val argumentService: ArgumentService) {
 
     @PostMapping
-    fun addArticle(@RequestBody request: ArgumentRequest) {
+    fun addArticle(@RequestBody request: NewArgument) {
         argumentService.saveArgument(request.toServiceRequest())
     }
 
     @GetMapping("/{argument-id}")
-    fun getArticle(@PathVariable("argument-id") id: Long): ResponseEntity<ArgumentResponse> {
+    fun getArticle(@PathVariable("argument-id") id: Long): ResponseEntity<ArgumentInfo> {
         val argument = argumentService.findArgument(id)
-        val response = ArgumentResponse.from(argument)
+        val response = ArgumentInfo.from(argument)
         return ResponseEntity.ok(response)
     }
 

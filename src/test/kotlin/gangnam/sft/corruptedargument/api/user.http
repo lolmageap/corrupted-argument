@@ -1,8 +1,21 @@
-### User Insert
-POST http://localhost:8080
+### 회원가입
+POST http://localhost:8080/user/sign-up
 Content-Type: application/json
 
 {
-  "name" : "chanwoo"
+  "email" : "test@naver.com",
+  "password" : "Abcd1234!",
+  "confirmPassword" : "Abcd1234!",
+  "name" : "asdf",
+  "birth" : "2023-09-19"
+}
+
+### 로그인
+POST http://localhost:8080/user/sign-in
+Content-Type: application/json
+
+{
+  "email" : "test",
+  "password" : "Abcd1234!"
 }
 
