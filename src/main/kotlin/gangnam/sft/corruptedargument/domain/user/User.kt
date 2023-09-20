@@ -14,6 +14,9 @@ class User(
     var birth: LocalDate?,
 ) : BaseEntity() {
 
+    var role: UserRole = UserRole.MEMBER
+        get() = role
+
     fun update(name: String, birth: LocalDate?){
         this.name = name
         this.birth = birth
