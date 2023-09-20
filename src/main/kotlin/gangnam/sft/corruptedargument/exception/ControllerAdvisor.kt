@@ -20,6 +20,12 @@ class ControllerAdvisor {
         return ResponseEntity.badRequest().body(error)
     }
 
+//    @ExceptionHandler(ExistException::class)
+//    fun existException(e: ExistException): ResponseEntity<Any> {
+//        val response = ClientResponse.fail(e.message)
+//        return ResponseEntity.status(e.getStatusCode()).body(response)
+//    }
+
 //    @ExceptionHandler(NotFoundException::class)
 //    fun notFoundException(e: NotFoundException): ResponseEntity<Any> {
 //        val response = ClientResponse.fail(e.message)
