@@ -1,11 +1,9 @@
 package gangnam.sft.corruptedargument.exception
 
-class ExistException(val property: Property) : GlobalRuntimeException(
-//    message = property
+class ExistException(private val property: Property) : GlobalRuntimeException(
+    message = property.value + "이(가) 존재하지 않습니다."
 ) {
 
-    override fun getStatusCode(): Int {
-        return 1
-    }
+    override val code: Int = 802
 
 }

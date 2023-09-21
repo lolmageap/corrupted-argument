@@ -1,11 +1,9 @@
 package gangnam.sft.corruptedargument.exception
 
-class NotFoundException(val state: Domain) : GlobalRuntimeException(
-//    message = state
+class NotFoundException(private val state: Domain) : GlobalRuntimeException(
+    message = state.value + "이(가) 존재하지 않습니다."
 ) {
 
-    override fun getStatusCode(): Int {
-        return 1
-    }
+    override val code: Int = 747
 
 }
