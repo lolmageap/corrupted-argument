@@ -20,17 +20,17 @@ class ControllerAdvisor {
         return ResponseEntity.badRequest().body(error)
     }
 
-//    @ExceptionHandler(ExistException::class)
-//    fun existException(e: ExistException): ResponseEntity<Any> {
-//        val response = ClientResponse.fail(e.message)
-//        return ResponseEntity.status(e.getStatusCode()).body(response)
-//    }
+    @ExceptionHandler(ExistException::class)
+    fun existException(e: ExistException): ResponseEntity<Any> {
+        val response = ClientResponse.fail(e.message)
+        return ResponseEntity.status(e.code).body(response)
+    }
 
-//    @ExceptionHandler(NotFoundException::class)
-//    fun notFoundException(e: NotFoundException): ResponseEntity<Any> {
-//        val response = ClientResponse.fail(e.message)
-//        return ResponseEntity.status(e.getStatusCode()).body(response)
-//    }
+    @ExceptionHandler(NotFoundException::class)
+    fun notFoundException(e: NotFoundException): ResponseEntity<Any> {
+        val response = ClientResponse.fail(e.message)
+        return ResponseEntity.status(e.code).body(response)
+    }
 
     @ExceptionHandler(IllegalArgumentException::class)
     fun illegalArgumentException(e: IllegalArgumentException): ResponseEntity<Any> {
@@ -46,9 +46,8 @@ class ControllerAdvisor {
 
     @ExceptionHandler(GlobalRuntimeException::class)
     fun removeFailedException(e: GlobalRuntimeException): ResponseEntity<Any> {
-        val statusCode: Int = e.getStatusCode()
         val response = ClientResponse.fail(e.message)
-        return ResponseEntity.status(statusCode).body(response)
+        return ResponseEntity.status(500).body(response)
     }
 
 }
