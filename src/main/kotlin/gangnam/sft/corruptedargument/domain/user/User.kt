@@ -1,6 +1,6 @@
 package gangnam.sft.corruptedargument.domain.user
 
-import gangnam.sft.corruptedargument.util.BaseEntity
+import gangnam.sft.corruptedargument.util.BaseDeleteEntity
 import jakarta.persistence.Entity
 import jakarta.persistence.Table
 import java.time.LocalDate
@@ -12,7 +12,7 @@ class User(
     val email: String,
     var password: String,
     var birth: LocalDate?,
-) : BaseEntity() {
+) : BaseDeleteEntity() {
 
     var role: UserRole = UserRole.MEMBER
         get() = role
