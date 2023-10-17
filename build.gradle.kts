@@ -21,6 +21,8 @@ repositories {
 }
 
 dependencies {
+	implementation("io.github.microutils:kotlin-logging:3.0.5")
+
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-oauth2-client")
 	implementation("org.springframework.boot:spring-boot-starter-security")
@@ -34,11 +36,16 @@ dependencies {
 
 	implementation("org.springframework.boot:spring-boot-starter-validation")
 
+	implementation("io.jsonwebtoken:jjwt-api")
+	implementation("io.jsonwebtoken:jjwt-impl")
+	implementation("io.jsonwebtoken:jjwt-jackson")
+
 	runtimeOnly("org.postgresql:postgresql")
 	runtimeOnly("com.h2database:h2")
+
+	testImplementation("io.kotest:kotest-core:5.0.0")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.security:spring-security-test")
-	testImplementation("io.kotest:kotest-core:5.0.0")
 }
 
 tasks.withType<KotlinCompile> {
